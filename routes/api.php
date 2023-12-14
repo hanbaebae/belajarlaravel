@@ -42,4 +42,6 @@ Route::group(['middleware' => ['jwt.verify']], function () {
 
 Route::controller(MUserController::class)->prefix('m_user')->group(function () {
     Route::post('/login', 'login');
+    Route::get('/getuserbyrole', 'getUserbyRole');
 });
+
